@@ -1,0 +1,8 @@
+flask
+flask_cors
+requests
+bs4
+openai
+pydantic
+python-dotenv
+gunicorn
