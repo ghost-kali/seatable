@@ -66,6 +66,7 @@ IMPORTANT:
 - Only use columns from this list: {columns_str}
 - If user asks for a column NOT in the list, DO NOT invent a column.
 - If you cannot map the user's request to the table/columns, return a SQL that indicates an error or just produce an empty result.
+- use only seatable sql format eg: SELECT * FROM Sheet1 WHERE `Candidate Last Name` LIKE '%t'
 User query: {natural_query}
 Table: {table_name}
 
