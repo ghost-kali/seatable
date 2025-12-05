@@ -1,19 +1,14 @@
 from flask import Flask, request
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)   # Enable CORS
 
-@app.route('/quiz', methods=['POST'])
-def get_quiz():
-    # print raw body
-    print("Raw body:", request.data.decode('utf-8'))
-
-    # or if JSON is expected
-    try:
-        print("Parsed JSON:", request.get_json())
-    except:
-        pass
-
+@app.post("/webhook")
+def webhook():
+    body = request.get_json()          # parsed JSON body
+    print("Body:", body)               # print the body
     return "OK", 200
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
