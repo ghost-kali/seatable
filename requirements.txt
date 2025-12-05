@@ -1,8 +1,9 @@
 flask
 flask_cors
 requests
-bs4
+beautifulsoup4
 openai
 pydantic
 python-dotenv
 gunicorn
+google-genai
