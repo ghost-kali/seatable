@@ -78,7 +78,7 @@ Return JSON matching this schema:
 
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-robotics-er-1.5-preview",
             contents=prompt,
             config={
                 "response_mime_type": "application/json",
