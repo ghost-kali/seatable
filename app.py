@@ -9,6 +9,7 @@ CORS(app)   # Enable CORS
 @app.route("/webhook", methods=["GET", "POST"])
 def webhook():
     if request.method == "GET":
+        print("OK")
         return {"message": "Ping OK"}
 
     body = request.get_json()
