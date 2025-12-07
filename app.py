@@ -6,9 +6,12 @@ from main import ai_sql
 app = Flask(__name__)
 CORS(app)   # Enable CORS
 
-@app.post("/webhook")
+@app.route("/webhook", methods=["GET", "POST"])
 def webhook():
-    body = request.get_json()          # parsed JSON body
+    if request.method == "GET":
+        return {"message": "Ping OK"}
+
+    body = request.get_json()
     print("Body:", body)
     response = ai_sql(body)
     print(response)
