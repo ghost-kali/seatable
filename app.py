@@ -11,7 +11,7 @@ def webhook():
     # If HEAD request → trigger your job silently
     if request.method == "HEAD":
         print("HEAD ping received → Running scheduled job")
-        ai_sql({})   # or pass default payload
+           # or pass default payload
         return "", 200
 
     # Normal POST flow
